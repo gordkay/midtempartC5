@@ -24,11 +24,18 @@ public class Days {
      */
     public static void main(String[] args) {
          
-    Scanner in =new Scanner(System.in);
-    System.out.println("Enter the day number (one,two,three,four,five) in string");
-    String code = in.next();
-    Weekdays t= new Weekdays();
-    t.nameOfDay(code); 
+    Scanner in = new Scanner(System.in);
+    
+    System.out.println("Enter the day's number (1-7):");
+    int dayNumber = in.nextInt();
+            
+    Weekdays t = new Weekdays();
+    
+    System.out.println("\nAll Days:");
+    t.printAllDays(); 
+    
+    System.out.println("\nSelected Day:");
+    t.nameOfDay(Day.fromNumber(dayNumber));
     }// TODO code application logic here
     
     
